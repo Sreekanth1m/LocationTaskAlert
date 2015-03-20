@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container"
+    >
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/ivExitDialog"
+    android:src="@drawable/ic_launcher"
+    tools:ignore = "ContentDescription"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_marginLeft="55dp"
+    android:layout_marginStart="55dp"
+    android:layout_marginTop="195dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/largetext"
+        android:id="@+id/bedtitle"
+        android:textSize="@dimen/abc_text_size_small_material"
+        android:layout_above="@+id/bedTextView"
+        android:layout_toRightOf="@+id/ivExitDialog"
+        android:layout_toEndOf="@+id/ivExitDialog" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/bedTextView"
+        android:layout_below="@+id/ivExitDialog"
+        android:layout_alignLeft="@+id/ivExitDialog"
+        android:layout_alignParentRight="false"
+        android:layout_alignStart="@+id/ivExitDialog"
+        android:textSize="@dimen/abc_text_size_small_material" />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:id="@+id/bedCancel"
+        android:layout_alignTop="@+id/bedHide"
+        android:layout_toLeftOf="@+id/bedHide"
+        android:layout_toStartOf="@+id/bedHide"
+        android:textSize="@dimen/abc_text_size_small_material"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="50dp" />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="Hide"
+        android:id="@+id/bedHide"
+        android:textSize="@dimen/abc_text_size_small_material"
+        android:layout_below="@+id/bedTextView"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="Exit"
+        android:id="@+id/bedExit"
+        android:textSize="@dimen/abc_text_size_small_material"
+        android:layout_alignTop="@+id/bedHide"
+        android:layout_toRightOf="@+id/bedHide"
+        android:layout_toEndOf="@+id/bedHide" />
+
+</RelativeLayout>

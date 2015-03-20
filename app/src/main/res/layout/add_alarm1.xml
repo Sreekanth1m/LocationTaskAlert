@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/add_alarm">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Title"
+        android:id="@+id/tvTitle"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/etTitle"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="50dp"
+        android:hint="Enter Task Title"
+        android:editable="true"
+        android:enabled="true"
+        android:focusable="true"
+        android:inputType="text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Description"
+        android:id="@+id/tvDesc"
+        android:layout_below="@+id/etTitle"
+        android:layout_alignLeft="@+id/tvTitle"
+        android:layout_alignStart="@+id/tvTitle"
+        android:layout_marginTop="30dp"
+        android:singleLine="true" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/etDesc"
+        android:layout_below="@+id/etTitle"
+        android:layout_alignLeft="@+id/etTitle"
+        android:layout_alignStart="@+id/etTitle"
+        android:layout_marginTop="25dp"
+        android:hint="Enter Task Description"
+        android:editable="true"
+        android:enabled="true"
+        android:focusable="true"
+        android:inputType="text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Address"
+        android:id="@+id/tvAddress"
+        android:layout_below="@+id/etDesc"
+        android:layout_alignLeft="@+id/tvDesc"
+        android:layout_alignStart="@+id/tvDesc"
+        android:layout_marginTop="30dp"
+        android:singleLine="true" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/etAddress"
+        android:layout_below="@+id/etDesc"
+        android:layout_alignLeft="@+id/etDesc"
+        android:layout_alignStart="@+id/etDesc"
+        android:layout_marginTop="25dp"
+        android:hint="Address / Select on Map"
+        android:enabled="true"
+        android:focusable="true"
+        android:editable="true"
+        android:inputType="text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Lattitude"
+        android:id="@+id/tvLatt"
+        android:layout_below="@+id/etAddress"
+        android:layout_alignLeft="@+id/tvAddress"
+        android:layout_alignStart="@+id/tvAddress"
+        android:layout_marginTop="30dp" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/etLatt"
+        android:layout_below="@+id/etAddress"
+        android:layout_alignLeft="@+id/etAddress"
+        android:layout_alignStart="@+id/etAddress"
+        android:selectAllOnFocus="false"
+        android:layout_marginTop="25dp"
+        android:hint="Lattitude"
+        android:enabled="true"
+        android:focusable="true"
+        android:editable="true"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Longitude"
+        android:id="@+id/tvLongg"
+        android:layout_below="@+id/etLatt"
+        android:layout_alignLeft="@+id/tvLatt"
+        android:layout_alignStart="@+id/tvLatt"
+        android:layout_marginTop="30dp" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/etLongg"
+        android:layout_below="@+id/etLatt"
+        android:layout_alignLeft="@+id/etLatt"
+        android:layout_alignStart="@+id/etLatt"
+        android:layout_marginTop="25dp"
+        android:hint="Longitude"
+        android:editable="true"
+        android:enabled="true"
+        android:focusable="true"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Task"
+        android:id="@+id/bAdd"
+        android:layout_below="@+id/etLongg"
+        android:layout_toRightOf="@+id/tvTitle"
+        android:layout_toEndOf="@+id/tvTitle"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_marginLeft="10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Clear Task"
+        android:id="@+id/bClearDelete"
+        android:layout_below="@+id/etLongg"
+        android:layout_toRightOf="@+id/bAdd"
+        android:layout_toEndOf="@+id/bAdd"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="40dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:singleLine="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Repeat"
+        android:id="@+id/bRepeat"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_below="@+id/bAdd"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:singleLine="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp" />
+</RelativeLayout>

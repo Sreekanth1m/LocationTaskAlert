@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Your Location"
+        android:id="@+id/latlongLocation"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/map"
+        android:layout_alignEnd="@+id/map" />
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_below="@+id/latlongLocation"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/map"
+        android:gravity="center"
+        android:background="@drawable/ic_launcher"
+        android:outlineProvider="bounds"
+        >
+
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="L"
+            android:id="@+id/bListAlarm"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="15dp" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="A"
+            android:id="@+id/bAddAlarm"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/bListAlarm"
+            android:layout_toEndOf="@+id/bListAlarm" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="S"
+            android:id="@+id/bSettings"
+            android:longClickable="false"
+            android:singleLine="true"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/bAddAlarm"
+            android:layout_toEndOf="@+id/bAddAlarm" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="E"
+            android:id="@+id/bExit"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/bSearch"
+            android:layout_toEndOf="@+id/bSearch" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="S"
+            android:id="@+id/bSearch"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/bSettings"
+            android:layout_toEndOf="@+id/bSettings"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentLeft="false"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="H"
+            android:id="@+id/bHelp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/bExit"
+            android:layout_toEndOf="@+id/bExit" />
+
+    </LinearLayout>
+</RelativeLayout>
